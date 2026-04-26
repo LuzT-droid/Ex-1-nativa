@@ -1,0 +1,46 @@
+body {
+    overflow: hidden; /* ล็อกไม่ให้เลื่อนทั้งแนวตั้งและแนวนอน */
+    touch-action: none; /* สำหรับมือถือ: ปิดการลากหรือใช้นิ้วเลื่อนหน้าจอ */
+}
+
+.หัวข้อ {
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    font-weight: bold;
+    font-size: 2vw;
+    left: 35%;
+    top: -10px;
+}
+.ซื้อ {
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    font-size: 1.5vw !important;
+    left: 3vw;
+    top: 10vw;
+    line-height: 0.4;
+}
+
+.customer-info{
+    position: relative;
+    color: rgb(100, 100, 100);
+    top: 10vw;
+    left: 1vw;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.5vw;
+    line-height: 1;
+}
+
+.ปุ่มซื้อ {
+    font-family: 'Prompt', sans-serif;
+    font-size: 2vw !important;
+    width: 25vw;
+    position: relative;
+    left: 48%;
+    top: 3vw;
+    transform: translate(-50%, -50%); /* ดึงกลับมาให้กึ่งกลางวัตถุตรงกับกึ่งกลางจอ */ 
+}
+
+.ปุ่มซื้อ:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(16, 147, 53);
+}

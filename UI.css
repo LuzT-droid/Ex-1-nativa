@@ -1,0 +1,893 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    /* ใช้คำสั่งสั้นๆ (Shorthand) ตัวเดียวจบ */
+    /* ดำสนิทถึง 1000px แล้วเบลอไปขาวที่ 2000px */
+    background: linear-gradient(to bottom, black 80%, white 100%) no-repeat;
+    
+    /* บังคับให้พื้นหลังที่เหลือต่อจากนั้นเป็นสีขาวเสมอ */
+    background-color: white;
+
+    /* สำคัญมาก: ต้องทำให้ body สูงพอที่จะเลื่อนดูได้ */
+    /* ถ้าเนื้อหาคุณน้อย ให้ลองใส่ความสูงเยอะๆ เพื่อทดสอบการเลื่อน */
+    min-height: 280vw;
+}
+
+/*ท่อน 1 รูป*/
+.ธรรมชาติ {
+    width: 75vw;  /* กำหนดความกว้าง */
+    height: 40vw; /* กำหนดความสูง */
+    object-fit: cover; /* ตัดส่วนเกินออก และจัดรูปให้อยู่ตรงกลาง */
+    position: absolute;
+    right: 0%;
+    opacity: 0.5;
+   -webkit-mask-image: linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 100%);
+    animation: พื้นหลังเข้า 1.5S ease-out forwards;
+}
+
+.ไล่ยุง1 {
+    width: 17vw;  /* กำหนดความกว้าง */
+    height: 17vw; /* กำหนดความสูง */
+    object-fit: cover; /* ตัดส่วนเกินออก และจัดรูปให้อยู่ตรงกลาง */
+    position: absolute;
+    left: 5vw;
+    top: 3vw;
+    animation: ขวดเข้า 1s ease-out forwards;
+}
+
+.ดับกลิ่น1 {
+    width: 17vw;  /* กำหนดความกว้าง */
+    height: 17vw; /* กำหนดความสูง */
+    object-fit: cover; /* ตัดส่วนเกินออก และจัดรูปให้อยู่ตรงกลาง */
+    position: absolute;
+    top: 23.5vw;
+    left: 5vw;
+    animation: ขวดเข้า 1s ease-out forwards;
+}
+
+.รูปด้านบน {
+    position: relative;
+    z-index: 1;
+}
+
+/*ท่อน 1 ข้อความ*/
+
+.logo {
+    position: absolute;
+    color: rgb(179, 232, 65);
+    font-weight: bold;
+    font-size: 3vw;
+    top: -4.5vw;
+    left: 7.5vw;
+    font-family: 'Prompt', sans-serif;
+    animation: โลโก้เข้า 1s ease-out forwards;
+}
+
+.ล็อกโลโก้ {
+    position: relative;
+}
+
+.h11 {
+    font-family: 'Prompt', sans-serif;
+    color: rgb(142, 233, 78);
+    position: relative;
+    z-index: 10;
+    font-size: 5vw;
+    top: 5vw;
+    left: 28vw;
+    font-weight: bold;
+    animation: h1เข้า 1s ease-out forwards;
+}
+.h12 {
+    font-family: 'Prompt', sans-serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 10;
+    font-size: 3vw;
+    top: -4vw;
+    font-weight: 100;
+    left: 58vw;
+    animation: h1เข้า 1s ease-out forwards;
+}
+.h13 {
+    font-family: 'Prompt', sans-serif;
+    color: rgb(142, 233, 78);
+    position: relative;
+    z-index: 10;
+    font-size: 5vw;
+    top: -13vw;
+    left: 65vw;
+    font-weight: bold;
+    animation: h1เข้า 1s ease-out forwards;
+}
+
+.h1 {
+    position: relative;
+    text-decoration: underline;
+}
+
+.h21 {
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(255, 221, 0);
+    font-weight: bold;
+    font-size: 7vw;
+    top: -20vw;
+    left: 30vw;
+    animation: h2เข้า 1.5s ease-out forwards;
+}
+
+.h22 {
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 4vw;
+    top: -15vw;
+    left: 50vw;
+    animation: h2เข้า 1.5s ease-out forwards;
+}
+
+.h23 {
+   font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(255, 221, 0);
+    font-weight: bold !important;
+    font-size: 13vw;
+    top: -18vw;
+    left: 55vw; 
+    display: inline-block;
+    animation: intro 3s ease-out forwards, jump 1s ease-in-out infinite 0.8s !important; 
+}
+.h24 {
+   font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-weight: bold !important;
+    font-size: 4vw;
+    top: -2vw;
+    left: 73vw; 
+    animation: h2เข้า 1.5s ease-out forwards;
+}
+
+.h2 {
+    position: relative;
+    z-index: 22 !important;
+    opacity: 1 !important;
+}
+
+.ไล่ยุง {
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(141, 141, 141);
+    font-weight: bold !important;
+    font-size: 2.5vw;
+    top: -12.4vw;
+    left: 5vw;
+    animation: โลโก้เข้า 1s ease-out forwards;
+}
+
+.ไล่ยุงย่อย {
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(141, 141, 141);
+    font-size: 2vw;
+    top: -11.5vw;
+    left: 11vw;
+    animation: โลโก้เข้า 1s ease-out forwards;
+}
+
+.ดับกลิ่น {
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(141, 141, 141);
+    font-weight: bold !important;
+    font-size: 2.5vw;
+    top: 8.3vw;
+    left: 5vw;
+    animation: โลโก้เข้า 1s ease-out forwards;
+}
+.ดับกลิ่นย่อย {
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(141, 141, 141);
+    font-size: 2vw;
+    top: 9.3vw;
+    left: 13.4vw;
+    animation: โลโก้เข้า 1s ease-out forwards;
+}
+
+.h1ย่อย {
+    position: relative;
+    z-index: 13;
+}
+
+.boxสั่งซื้อ1 {
+    font-family: 'Prompt', sans-serif;
+    font-size: 2vw;
+    position: absolute;
+    font-weight: bold;
+    background-color: rgb(255, 221, 0);
+    color: black;
+    z-index: 14;
+    right: 5vw;
+    width: 8vw;
+    border-radius: 30px;
+    width: 14vw;  /* กว้าง 80% ของหน้าจอ */
+    height: 4vw;
+    top: 12vw;
+    animation: ซื้อเข้า 1s ease-out forwards;
+}
+
+.boxสั่งซื้อ1:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: rgb(255, 200, 0) !important;
+
+}
+
+.ล็อกสั่งซื้อ {
+    position: relative;
+}
+
+.IG {
+    position: relative;
+    width: 3vw;
+    top: 11vw;
+    left: 26vw;
+    animation: ซื้อเข้า 1s ease-out forwards;
+}
+
+.ig {
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    color: rgb(124, 124, 124);
+    font-size: 2vw;
+    top: 5.6vw;
+    left: 29vw;
+    animation: ซื้อเข้า 1s ease-out forwards;
+}
+
+.ตกแต่ง1 {
+   position: relative;
+    width: 40vw;
+    top: 20vw;
+    left: 0vw; 
+    animation: ตกแต่ง1เข้า 1s ease-out forwards;
+}
+
+.ตกแต่ง2 {
+   position: relative;
+    width: 40vw;
+    top: 45vw;
+    right: -60vw; 
+    transform: rotate(180deg) !important;
+    animation: ตกแต่ง2เข้า 1s ease-out forwards;
+}
+
+.เกริ่น {
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5vw;
+    font-weight: bold;
+    position: relative;
+    color: aliceblue;
+    text-align: center; /* กันเหนียวไว้เพื่อให้ตัวหนังสือข้างในเรียงกันสวยๆ */
+    width: 90vw;
+    top:  35vw;
+    width: 50%;       /* ต้องกำหนดความกว้าง */
+    margin: 0 auto;   /* บน-ล่าง 0 , ซ้าย-ขวา auto (มันจะดันเข้ากลางเอง)*/
+    animation: เกริ่นเข้า 1s ease-out forwards;
+}
+
+
+.พื้นหลังขวด2 {
+    width: 80vw;  /* กำหนดความกว้าง */
+  height: 60vw; /* กำหนดความสูง */
+    position: absolute;
+    top: 50vw;
+    left: 10vw;
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+    z-index: 2;
+}
+
+.ล็อกพื้นหลังขวด {
+    position: relative;
+}
+
+.ขวด {
+    width: 80vw;  /* กำหนดความกว้าง */
+  height: 60vw; /* กำหนดความสูง */
+    position: absolute;
+    top: 50vw;
+    left: 10vw;
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+    z-index: 10;
+}
+
+.พื้นหลังสรรพคุณ11 {
+    position: absolute;
+    z-index: 5;
+    width: 50vw;
+    top: 65vw;
+    left: -9vw;
+    transform: rotate(180deg) !important;
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    mask-image: linear-gradient(to right, black 20%, transparent 90%);
+    animation: พื้นหลังขวดเข้า1 1s ease-out forwards;
+}
+
+.พื้นหลังสรรพคุณ12 {
+    position: absolute;
+    z-index: 5;
+    width: 50vw;
+    top: 75vw;
+    left: -9vw;
+    transform: rotate(180deg) !important;
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    mask-image: linear-gradient(to right, black 20%, transparent 90%);
+    animation: พื้นหลังขวดเข้า1 1s ease-out forwards;
+}
+
+.พื้นหลังสรรพคุณ13 {
+    position: absolute;
+    z-index: 5;
+    width: 50vw;
+    top: 85vw;
+    left: -9vw;
+    transform: rotate(180deg) !important;
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    mask-image: linear-gradient(to right, black 20%, transparent 90%);
+    animation: พื้นหลังขวดเข้า1 1s ease-out forwards;
+}
+
+.พื้นหลังสรรพคุณ21 {
+    position: absolute;
+    z-index: 5;
+    width: 50vw;
+    top: 65vw;
+    right: -10vw;
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    mask-image: linear-gradient(to right, black 20%, transparent 90%);
+    animation: พื้นหลังขวดเข้า2 1s ease-out forwards;
+}
+
+.พื้นหลังสรรพคุณ22 {
+    position: absolute;
+    z-index: 5;
+    width: 50vw;
+    top: 75vw;
+    right: -10vw;
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    mask-image: linear-gradient(to right, black 20%, transparent 90%);
+    animation: พื้นหลังขวดเข้า2 1s ease-out forwards;
+}
+
+.พื้นหลังสรรพคุณ23 {
+    position: absolute;
+    z-index: 5;
+    width: 50vw;
+    top: 85vw;
+    right: -10vw;
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    mask-image: linear-gradient(to right, black 20%, transparent 90%);
+    animation: พื้นหลังขวดเข้า2 1s ease-out forwards;
+}
+
+.ส11{
+    position: absolute;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 4vw;
+    top: 60vw;
+    left: 29vw;
+    animation: สรรพคุณ1เข้า  1s ease-out forwards;
+}
+.ส11ย่อย{
+    position: absolute;
+    z-index: 10;
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5vw;
+    top: 66vw;
+    left: 20vw;
+    animation: สรรพคุณ1เข้า  1s ease-out forwards;
+}
+.ส12{
+    position: absolute;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 4vw;
+    top: 70vw;
+    left: 22vw;
+    animation: สรรพคุณ1เข้า  1s ease-out forwards;
+}
+.ส12ย่อย{
+    position: absolute;
+    z-index: 10;
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5vw;
+    top: 76vw;
+    left: 12vw;
+    animation: สรรพคุณ1เข้า  1s ease-out forwards;
+}
+.ส13{
+    position: absolute;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 4vw;
+    top: 80vw;
+    left: 26vw;
+    animation: สรรพคุณ1เข้า  1s ease-out forwards;
+}
+.ส13ย่อย{
+    position: absolute;
+    z-index: 10;
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5vw;
+    top: 86vw;
+    left: 18vw;
+    animation: สรรพคุณ1เข้า  1s ease-out forwards;
+}
+
+
+.ส21{
+    position: absolute;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 4vw;
+    top: 60vw;
+    left: 62vw;
+    animation: สรรพคุณ2เข้า  1s ease-out forwards;
+}
+.ส21ย่อย{
+    position: absolute;
+    z-index: 10;
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5vw;
+    top: 66vw;
+    left: 66vw;
+    animation: สรรพคุณ2เข้า  1s ease-out forwards;
+}
+.ส22{
+    position: absolute;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 4vw;
+    top: 70vw;
+    left: 65vw;
+    animation: สรรพคุณ2เข้า  1s ease-out forwards;
+}
+.ส22ย่อย{
+    position: absolute;
+    z-index: 10;
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5vw;
+    top: 76vw;
+    left: 68vw;
+    animation: สรรพคุณ2เข้า  1s ease-out forwards;
+}
+.ส23{
+    position: absolute;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 4vw;
+    top: 80vw;
+    left: 65vw;
+    animation: สรรพคุณ2เข้า  1s ease-out forwards;
+}
+.ส23ย่อย{
+    position: absolute;
+    z-index: 10;
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5vw;
+    top: 86vw;
+    left: 67vw;
+    animation: สรรพคุณ2เข้า  1s ease-out forwards;
+}
+
+.ราคา1 {
+    position: absolute;
+    top: 90vw;
+    left: 22vw;
+    animation: สรรพคุณ1เข้า  1s ease-out forwards;
+}
+.ราคา2 {
+    position: absolute;
+    top: 90vw;
+    left: 65vw;
+    animation: สรรพคุณ2เข้า  1s ease-out forwards;
+}
+
+.ล็อกราคา {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold !important;
+    font-size: 2.5vw;
+    z-index: 15;
+}
+
+.สรรพคุณ {
+    position: relative;
+
+}
+
+.ซื้อ2 {
+    position: relative;
+    z-index: 10;
+    animation: ซื้อ2เข้า 1s ease-out forwards;
+}
+
+.กดซื้อ21 {
+    position: absolute;
+    left: 20vw;
+}
+
+.กดซื้อ22 {
+    position: absolute;
+    left: 66vw;
+}
+
+.กดซื้อ21, .กดซื้อ22 {
+    top: 100vw;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: rgb(252, 223, 0);
+    width: 15vw;
+    font-size: 2vw;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+.กดซื้อ21:hover, 
+.กดซื้อ22:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.h3 {
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 3vw;
+    top:170vw;
+    animation: หัวข้อเม้นเข้า 1s ease-out forwards;
+}
+
+.ดาว {
+    position: absolute;
+    width: 20vw;
+    top: 172vw;
+    animation: หัวข้อเม้นเข้า 1s ease-out forwards;
+}
+
+.ดาวย่อย1{
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    font-weight: bold;
+    font-size: 2vw;
+    top: 185vw;
+    animation: หัวข้อเม้นเข้า 1s ease-out forwards;
+}
+.ดาวย่อย2{
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    font-weight: bold;
+    font-size: 2vw;
+    top: 189vw;
+    animation: หัวข้อเม้นเข้า 1s ease-out forwards;
+}
+
+.ล็อกh3 {
+    position: relative !important;
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center;     /* จัดกลางแนวตั้ง */
+    height: 100vh;           /* กำหนดความสูงเพื่อให้เห็นผลการจัดกลางแนวตั้ง */
+}
+
+.ขวดไล่ยุง {
+    position: absolute;
+    width: 15vw;
+    top: 150vw;
+    left: 0vw;
+    animation: ขวดเข้า2 0.5s ease-out forwards;
+}
+.ขวดดับกลิ่น1 {
+    position: absolute;
+    width: 60vw;
+    top: 160vw;
+    right: -20vw;
+    animation: ขวดเข้า2 0.5s ease-out forwards;
+}
+
+.ขวดคู่ {
+    position: relative;
+}
+
+
+.คอมเม้น11 {
+    position: absolute;
+    top: 157vw;
+    left: 12vw;
+    animation: คอมเม้น1เข้า 1s ease-out forwards;
+}
+
+.คอมเม้น12 {
+    position: absolute;
+    top: 165vw;
+    left: 12vw;
+    animation: คอมเม้น1เข้า 1s ease-out forwards;
+}
+
+.คอมเม้น13 {
+    position: absolute;
+    top: 173vw;
+    left: 14vw;
+    width: 24vw !important;
+    animation: คอมเม้น1เข้า 1s ease-out forwards;
+}
+
+.คอมเม้น14 {
+    position: absolute;
+    top: 181vw;
+    left: 14vw;
+    animation: คอมเม้น1เข้า 1s ease-out forwards;
+}
+
+.คอมเม้น15 {
+    position: absolute;
+    top: 195vw;
+    left: 12vw;
+    animation: คอมเม้น1เข้า 1s ease-out forwards;
+}
+
+.คอมเม้น21 {
+    position: absolute;
+    top: 157vw;
+    left: 57vw;
+    width: 29vw !important;
+    animation: คอมเม้น2เข้า 1s ease-out forwards;
+}
+
+.คอมเม้น22 {
+    position: absolute;
+    top: 162vw;
+    left: 50vw;
+    animation: คอมเม้น2เข้า 1s ease-out forwards;
+}
+
+.คอมเม้น23 {
+    position: absolute;
+    top: 172vw;
+    left: 44vw;
+    width: 40vw !important;
+    animation: คอมเม้น2เข้า 1s ease-out forwards;
+}
+.คอมเม้น24 {
+    position: absolute;
+    top: 180vw;
+    left: 34vw;
+    width: 55vw !important;
+    animation: คอมเม้น2เข้า 1s ease-out forwards;
+}
+.คอมเม้น25 {
+    position: absolute;
+    top: 193vw;
+    left: 50vw;
+    animation: คอมเม้น2เข้า 1s ease-out forwards;
+}
+
+.คอมเม้นรวม {
+    position: relative;
+    width: 33vw;
+}
+
+.คอมเม้นรวม img {
+    width: 100%;  /* สั่งให้รูปกว้างเท่ากับ 10vw ของตัวแม่เสมอ */
+    height: auto; /* ให้ความสูงปรับตามสัดส่วน ไม่ให้รูปเบี้ยว */
+}
+
+.สรุป {
+    position: relative;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    top: 240vw;
+    left: 14vw;
+    width: 70vw;
+    font-size: 3vw;
+    animation: สรุปเข้า 1s ease-out forwards;
+}
+
+.จัดกลางสรุป {
+    text-align: center;
+}
+
+.พื้นหลังจบ {
+    position: absolute;
+    height: 55vw;
+    width: 100vw;
+    top: 260vw;
+}
+
+.พื้นหลังขวด {
+    position: absolute;
+    opacity: 0.5;
+    width: 60vw;
+    top: 265vw;
+    left: 21vw;
+   mask-image: radial-gradient(circle, black 50%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0,0,0,0) 100%);
+}
+
+.line {
+    position: absolute;
+    top: 300vw;
+    left: 2vw;
+    width: 3vw;
+}
+
+.IG2 {
+    position: absolute;
+    top: 303vw;
+    left: 2vw;
+    width: 3vw;
+}
+
+.เบอร์ {
+    position: absolute;
+    top: 306vw;
+    left: 2vw;
+    width: 3vw;
+}
+
+.อีเมล {
+    position: absolute;
+    top: 309vw;
+    left: 2vw;
+    width: 3vw;
+}
+
+.จบ {
+    position: relative;
+}
+
+.บทจบ {
+    position: absolute;
+    color: rgb(103, 103, 103);
+    z-index: 20;
+    top: 258.3vw;
+    left: 42vw;
+    font-size: 2.5vw;
+}
+
+.h31 {
+    position: absolute;
+    color: rgb(255, 221, 0);
+    top: 263vw;
+    left: 34vw;
+    font-size: 4vw;
+}
+
+.h32 {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 266.2vw;
+    left: 46vw;
+    font-size: 2.5vw;
+}
+
+.h33 {
+    position: absolute;
+    color: rgb(255, 221, 0);
+    font-size: 5vw;
+    top: 262vw;
+    left: 56vw;
+}
+.h34 {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 2.5vw;
+    top: 266.5vw;
+    left: 63vw;
+}
+
+.ข้อความจบ {
+    position: relative;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+}
+
+.กดซื้อ3 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(255, 225, 0);
+    position: relative;
+    z-index: 19;
+    top: 275vw;
+    left: 45vw;
+    font-size: 1.5vw;
+    width: 12vw;
+    border-radius: 50px;
+    animation: ซื้อขยับ 2s ease-in-out infinite;
+}
+
+.กดซื้อ3:hover {
+    color: rgb(255, 217, 0);
+    background-color: black;
+}
+
+.ไลน์3{
+    position: absolute;;
+    top: 296.7vw;
+    left: 5vw;
+}
+
+.ไอจี3{
+    position: absolute;;
+    top: 299.8vw;
+    left: 5vw;
+}
+
+.เบอร์3{
+    position: absolute;;
+    top: 303vw;
+    left: 5vw;
+}
+
+.อีเมล3{
+    position: absolute;;
+    top: 306vw;
+    left: 5vw;
+}
+
+.อ้างอิงเพิ่มเติม {
+    position: relative;
+    font-family: 'Prompt', sans-serif;
+    color: rgb(99, 99, 99);
+    font-size: 1vw;
+    z-index: 30;
+}
+
+.เว็ป{
+    position: relative;
+    font-family: 'Prompt', sans-serif;
+    color: rgb(99, 99, 99);
+    font-size: 1vw;
+    z-index: 30;
+    top: 309vw;
+    left: 80vw;
+}

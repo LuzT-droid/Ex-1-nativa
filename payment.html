@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="UIbuy.css">
+    <script src="buy.js"></script>
+
+    <title>ชำระเงิน - NATIVA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="หัวข้อ"> 
+        <h1>ยืนยันการสั่งซื้อ</h1>
+    </div>
+
+    <div   class="ซื้อ",id="order-summary">
+        <p>สินค้า: <span id="product-name"></span></p>
+        <p>ยอดชำระ: <strong id="order-total"></strong> บาท</p>
+    </div>
+
+    <div class="customer-info" style="padding: 20px;">
+        <h3>กรอกรายละเอียดการจัดส่ง</h3>
+        <form id="orderForm">
+            <input type="hidden" id="hidden-item" name="item">
+            <input type="hidden" id="hidden-amount" name="amount">
+
+            <div style="margin-bottom: 10px;">
+                <label>ชื่อ-นามสกุล:</label><br>
+                <input type="text" id="cus_name" name="name" required style="width: 90%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label>เบอร์โทรศัพท์:</label><br>
+                <input type="tel" id="cus_tel" name="tel" required style="width: 90%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label>ที่อยู่จัดส่ง:</label><br>
+                <textarea id="cus_address" name="address" required style="width: 90%; padding: 8px;" rows="3"></textarea>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label>โอนเงินเข้าบัญชี XXX-XXXX-XXX (กสิกร)</label><br>
+                <label>แนบสลิปโอนเงิน:</label><br>
+                <input type="file" id="cus_slip" accept="image/*" required style="width: 90%; padding: 8px;">
+</div>
+
+            <button type="submit" class="ปุ่มซื้อ">ยืนยันและสั่งซื้อสินค้า</button>
+        </form>
+    </div>
+
+<script>
+
+    // มองหาบรรทัดนี้ในไฟล์ payment.html ของเตงนะ
+// --- ส่วนที่ 1: ดึงข้อมูลจากหน้าแรกมาแสดงผล ---
+window.onload = function() {
+    const name = sessionStorage.getItem('productName');
+    const price = sessionStorage.getItem('productPrice');
+
+    if (name && price) {
+        document.getElementById('product-name').innerText = name;
+        document.getElementById('order-total').innerText = price;
+    } else {
+        document.getElementById('product-name').innerText = "NATIVA Herbal Spray";
+        document.getElementById('order-total').innerText = "290";
+    }
+};
+
+// --- ส่วนที่ 2: ฟังก์ชันส่งข้อมูลเมื่อกดปุ่มยืนยัน ---
+document.getElementById('orderForm').onsubmit = async function(e) {
+    e.preventDefault(); 
+
+    const btn = e.target.querySelector('button');
+    const originalBtnText = btn.innerText;
+    btn.disabled = true;
+    btn.innerText = "กำลังส่งข้อมูล... โปรดรอสักครู่";
+
+    try {
+        const slipFile = document.getElementById('cus_slip').files[0];
+        if (!slipFile) {
+            alert("กรุณาแนบรูปสลิปด้วยครับ");
+            btn.disabled = false;
+            btn.innerText = originalBtnText;
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.readAsDataURL(slipFile);
+        reader.onload = async function() {
+            const base64Image = reader.result;
+
+            const formData = {
+                product: document.getElementById('product-name').innerText,
+                price: document.getElementById('order-total').innerText,
+                customer: document.getElementById('cus_name').value,
+                tel: document.getElementById('cus_tel').value,
+                address: document.getElementById('cus_address').value,
+                slip: base64Image
+            };
+
+            // ใส่ URL ล่าสุดจากการ Deploy ของคุณตรงนี้
+            const scriptURL = "https://script.google.com/macros/s/AKfycbykN97Yj7ag3u2AGAzeJEI1rop_gMs18unfsDxcf5NvK8H3dJlpv_dbJcexPZirFPl3kQ/exec"; 
+
+            try {
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors', 
+                    body: JSON.stringify(formData)
+                });
+                
+                alert("ส่งข้อมูลสำเร็จแล้ว! ขอบคุณครับ Clark");
+                sessionStorage.clear();
+                location.reload(); 
+                
+            } catch (err) {
+                alert("เกิดข้อผิดพลาดในการส่ง: " + err.message);
+                btn.disabled = false;
+                btn.innerText = originalBtnText;
+            }
+        };
+
+    } catch (error) {
+        alert("ระบบขัดข้อง: " + error.message);
+        btn.disabled = false;
+        btn.innerText = originalBtnText;
+    }
+};
+</script>
+
+</body>
+</html>

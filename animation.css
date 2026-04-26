@@ -1,0 +1,277 @@
+
+@keyframes พื้นหลังเข้า {
+    0% {
+        opacity: 0;
+        filter: blur(20px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    }
+    100% {
+        opacity: 0.5;
+        filter: blur(0px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    } 
+}
+
+@keyframes โลโก้เข้า {
+   0% {
+        opacity: 0;
+        transform: translateX(-40px);
+        filter: blur(20px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        filter: blur(0px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    } 
+}
+
+@keyframes ขวดเข้า {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+        filter: blur(20px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        filter: blur(0px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    }
+}
+
+@keyframes h1เข้า {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+        filter: blur(20px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        filter: blur(0px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    }
+}
+
+@keyframes h2เข้า {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+        filter: blur(20px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        filter: blur(0px);/* เพิ่มความเบลอเพื่อให้ดูเหมือนกำลังเคลื่อนที่ */
+    }
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+    transform: translatex(20px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    filter: blur(0px);
+  }
+}
+
+/* 2. ท่าวนซ้ำ: ให้ตัวหนังสือกระโดด */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* ระยะที่กระโดดขึ้น */
+  }
+}
+
+@keyframes ซื้อเข้า {
+    0% {
+    opacity: 0;
+    transform: translatex(20px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes ตกแต่ง1เข้า {
+    0% {
+    opacity: 0;
+    transform: translatex(-20px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes ตกแต่ง2เข้า {
+    0% {
+    opacity: 0;
+    transform: translatex(20px) !important;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes เกริ่นเข้า {
+    0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    }
+}
+
+@keyframes พื้นหลังขวดเข้า1 {
+    0% {
+    opacity: 0;
+    transform: translatex(-20px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    filter: blur(0px);
+    }
+}
+
+@keyframes พื้นหลังขวดเข้า2 {
+    0% {
+    opacity: 0;
+    transform: translatex(20px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    filter: blur(0px);
+    }
+}
+
+@keyframes สรรพคุณ1เข้า {
+    0% {
+    opacity: 0;
+    transform: translatex(20px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    filter: blur(0px);
+    }
+}
+
+@keyframes สรรพคุณ2เข้า {
+    0% {
+    opacity: 0;
+    transform: translatex(-20px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    filter: blur(0px);
+    }
+}
+
+@keyframes ซื้อ2เข้า {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    }  
+}
+
+@keyframes หัวข้อเม้นเข้า {
+    0% {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    }  
+}
+
+@keyframes ขวดเข้า2 {
+    0% {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    }  
+}
+
+@keyframes คอมเม้น1เข้า {
+    0% {
+    opacity: 0;
+    transform: translateX(50px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px);
+    } 
+}
+
+@keyframes คอมเม้น2เข้า {
+    0% {
+    opacity: 0;
+    transform: translateX(-50px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px);
+    } 
+}
+
+@keyframes สรุปเข้า {
+    0% {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(5px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    } 
+}
+
+@keyframes ซื้อขยับ {
+    0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* ระยะที่กระโดดขึ้น */
+  }
+}
