@@ -891,3 +891,29 @@ body {
     top: 309vw;
     left: 80vw;
 }
+
+/* เมื่อเปิดในมือถือ (จอเล็กกว่า 600px) */
+@media screen and (max-width: 600px) {
+  
+  /* ปรับให้รูปภาพขยายเต็มความกว้างจอ */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ถ้าเตงใช้ Flexbox หรือ Grid ให้ปรับเป็นแนวตั้ง */
+  .container { 
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* ปรับขนาดตัวอักษรให้เล็กลงนิดหน่อยเพื่อให้ไม่ล้นจอ */
+  h1 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+}
